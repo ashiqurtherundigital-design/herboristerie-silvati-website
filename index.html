@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herboristerie Silvati | Artisan Herbal Skincare | Soins Herbales Artisans</title>
-    <meta name="description" content="Family-owned artisan herbal skincare from Monts Sutton, Quebec. Natural, minimal ingredient cosmetics handmade by the Lichtenauer Family.">
-    
-    <!-- Fonts -->
+    <title>Herboristerie Silvati | Artisan Herbal Skincare</title>
+    <meta name="description" content="Family-owned artisan herbal skincare from Monts Sutton, Quebec.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <script>
         tailwind.config = {
             theme: {
@@ -42,121 +33,13 @@
             }
         }
     </script>
-    
-    <style>
-        /* Custom Styles */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #F5F5F0;
-            overflow-x: hidden;
-        }
-        
-        .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        /* Language Toggle Animation */
-        .lang-btn {
-            transition: all 0.3s ease;
-        }
-        .lang-btn.active {
-            background-color: #D4AF37;
-            color: white;
-        }
-        
-        /* Hero Parallax */
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        /* Gold Shimmer Effect */
-        @keyframes shimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-        
-        .gold-text {
-            background: linear-gradient(90deg, #D4AF37 0%, #F4E8C1 25%, #D4AF37 50%, #F4E8C1 75%, #D4AF37 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s linear infinite;
-        }
-        
-        /* Product Card Hover */
-        .product-card {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
-        }
-        
-        /* Botanical Pattern */
-        .botanical-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Navigation Blur */
-        .nav-blur {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F5F5F0;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D4AF37;
-            border-radius: 4px;
-        }
-        
-        /* Ingredient Tag */
-        .ingredient-tag {
-            transition: all 0.3s ease;
-        }
-        .ingredient-tag:hover {
-            background-color: #D4AF37;
-            color: white;
-            transform: scale(1.05);
-        }
-        
-        /* Loading Animation */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="text-silvati-dark">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-12 h-12 relative">
                         <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-lg">
@@ -170,22 +53,18 @@
                     </div>
                 </div>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="nav-link text-white hover:text-silvati-gold transition-colors duration-300 text-sm tracking-wide font-medium" data-en="Our Story" data-fr="Notre Histoire">Our Story</a>
                     <a href="#products" class="nav-link text-white hover:text-silvati-gold transition-colors duration-300 text-sm tracking-wide font-medium" data-en="Products" data-fr="Produits">Products</a>
                     <a href="#ingredients" class="nav-link text-white hover:text-silvati-gold transition-colors duration-300 text-sm tracking-wide font-medium" data-en="Ingredients" data-fr="Ingrédients">Ingredients</a>
                     <a href="#market" class="nav-link text-white hover:text-silvati-gold transition-colors duration-300 text-sm tracking-wide font-medium" data-en="Find Us" data-fr="Nous Trouver">Find Us</a>
                     <a href="#contact" class="nav-link text-white hover:text-silvati-gold transition-colors duration-300 text-sm tracking-wide font-medium" data-en="Contact" data-fr="Contact">Contact</a>
-                    
-                    <!-- Language Toggle -->
                     <div class="flex items-center bg-white/10 rounded-full p-1 backdrop-blur-sm border border-white/20">
                         <button onclick="setLanguage('en')" id="btn-en" class="lang-btn active px-3 py-1 rounded-full text-xs font-semibold text-white">EN</button>
                         <button onclick="setLanguage('fr')" id="btn-fr" class="lang-btn px-3 py-1 rounded-full text-xs font-semibold text-white">FR</button>
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button onclick="toggleMobileMenu()" class="md:hidden text-white nav-text">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -193,7 +72,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 bg-white z-50 shadow-2xl p-6 md:hidden">
         <button onclick="toggleMobileMenu()" class="absolute top-4 right-4 text-silvati-dark">
             <i data-lucide="x" class="w-6 h-6"></i>
@@ -211,10 +89,8 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center justify-center relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-silvati-stone"></div>
-        
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <div class="mb-6 inline-block">
                 <svg viewBox="0 0 100 100" class="w-24 h-24 mx-auto drop-shadow-2xl hero-logo opacity-0">
@@ -222,41 +98,29 @@
                     <path d="M50 35 Q40 25 35 40 Q25 50 35 60 Q40 75 50 65 Q60 75 65 60 Q75 50 65 40 Q60 25 50 35" fill="#6B2D5C"/>
                 </svg>
             </div>
-            
             <h1 class="font-serif text-5xl md:text-7xl text-white mb-4 hero-title opacity-0 leading-tight">
                 <span class="block" data-en="Herboristerie" data-fr="Herboristerie">Herboristerie</span>
                 <span class="gold-text block mt-2" data-en="Silvati" data-fr="Silvati">Silvati</span>
             </h1>
-            
             <p class="text-xl md:text-2xl text-white/90 font-light mb-2 hero-subtitle opacity-0 font-serif italic" data-en="Incorporated" data-fr="Incorporée">Incorporated</p>
-            
             <div class="w-24 h-0.5 bg-silvati-gold mx-auto my-6 hero-line opacity-0"></div>
-            
             <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto hero-desc opacity-0 font-light leading-relaxed" 
                data-en="Artisan herbal skincare from the heart of Monts Sutton. Natural, minimal, transformative." 
                data-fr="Soins herbales artisans au cœur des Monts Sutton. Naturels, minimaux, transformateurs.">
                 Artisan herbal skincare from the heart of Monts Sutton. Natural, minimal, transformative.
             </p>
-            
             <div class="flex flex-col sm:flex-row gap-4 justify-center hero-cta opacity-0">
                 <a href="#products" class="px-8 py-4 bg-silvati-gold text-white rounded-full font-semibold tracking-wide hover:bg-silvati-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" 
-                   data-en="Explore Products" data-fr="Découvrir les Produits">
-                    Explore Products
-                </a>
+                   data-en="Explore Products" data-fr="Découvrir les Produits">Explore Products</a>
                 <a href="#about" class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold tracking-wide hover:bg-white hover:text-silvati-dark transition-all duration-300" 
-                   data-en="Our Story" data-fr="Notre Histoire">
-                    Our Story
-                </a>
+                   data-en="Our Story" data-fr="Notre Histoire">Our Story</a>
             </div>
         </div>
-
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i data-lucide="chevron-down" class="w-6 h-6 text-white/70"></i>
         </div>
     </section>
 
-    <!-- Trust Bar -->
     <section class="bg-white py-6 border-b border-silvati-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
@@ -280,29 +144,15 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 md:py-32 botanical-pattern relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in-up">
-                    <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" 
-                         data-en="OUR STORY" data-fr="NOTRE HISTOIRE">OUR STORY</div>
-                    <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-6 leading-tight" 
-                        data-en="Born from Necessity, Crafted with Love" 
-                        data-fr="Née de la Nécessité, Faite avec Amour">
-                        Born from Necessity, Crafted with Love
-                    </h2>
+                    <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" data-en="OUR STORY" data-fr="NOTRE HISTOIRE">OUR STORY</div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-6 leading-tight" data-en="Born from Necessity, Crafted with Love" data-fr="Née de la Nécessité, Faite avec Amour">Born from Necessity, Crafted with Love</h2>
                     <div class="w-16 h-1 bg-silvati-gold mb-6"></div>
-                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" 
-                       data-en="Confronted with persistent skin issues, the Lichtenauer family decided to take matters into their own hands. We began crafting our own skincare products using only the finest natural ingredients, sourced with the highest standards." 
-                       data-fr="Confrontés à des problèmes de peau persistants, la famille Lichtenauer a décidé de prendre les choses en main. Nous avons commencé à créer nos propres produits de soins en utilisant uniquement les meilleurs ingrédients naturels, sourcés selon les plus hauts standards.">
-                        Confronted with persistent skin issues, the Lichtenauer family decided to take matters into their own hands. We began crafting our own skincare products using only the finest natural ingredients, sourced with the highest standards.
-                    </p>
-                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" 
-                       data-en="The results exceeded our expectations. Today, we are proud to share our experience with you, continuously improving our offerings through your valuable feedback." 
-                       data-fr="Les résultats ont dépassé nos attentes. Aujourd'hui, nous sommes fiers de partager cette expérience avec vous, améliorant continuellement nos offres grâce à vos précieux retours.">
-                        The results exceeded our expectations. Today, we are proud to share our experience with you, continuously improving our offerings through your valuable feedback.
-                    </p>
+                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" data-en="Confronted with persistent skin issues, the Lichtenauer family decided to take matters into their own hands. We began crafting our own skincare products using only the finest natural ingredients, sourced with the highest standards." data-fr="Confrontés à des problèmes de peau persistants, la famille Lichtenauer a décidé de prendre les choses en main.">Confronted with persistent skin issues, the Lichtenauer family decided to take matters into their own hands. We began crafting our own skincare products using only the finest natural ingredients, sourced with the highest standards.</p>
+                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" data-en="The results exceeded our expectations. Today, we are proud to share our experience with you, continuously improving our offerings through your valuable feedback." data-fr="Les résultats ont dépassé nos attentes.">The results exceeded our expectations. Today, we are proud to share our experience with you, continuously improving our offerings through your valuable feedback.</p>
                     <div class="flex items-center space-x-4 mt-8">
                         <div class="w-16 h-16 rounded-full bg-silvati-gold/10 flex items-center justify-center">
                             <i data-lucide="mountain" class="w-8 h-8 text-silvati-gold"></i>
@@ -315,16 +165,10 @@
                 </div>
                 <div class="relative fade-in-up">
                     <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" 
-                             alt="Artisan herbal preparation" 
-                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Artisan herbal preparation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
-                        <p class="font-serif text-lg text-silvati-dark italic" 
-                           data-en="'We choose our suppliers carefully and apply high criteria for every ingredient.'" 
-                           data-fr="'Nous choisissons soigneusement nos fournisseurs et appliquons des critères élevés pour chaque ingrédient.'">
-                            "We choose our suppliers carefully and apply high criteria for every ingredient."
-                        </p>
+                        <p class="font-serif text-lg text-silvati-dark italic" data-en="'We choose our suppliers carefully and apply high criteria for every ingredient.'" data-fr="'Nous choisissons soigneusement nos fournisseurs.'">"We choose our suppliers carefully and apply high criteria for every ingredient."</p>
                         <p class="text-sm text-silvati-gold mt-2 font-semibold">— Family Lichtenauer</p>
                     </div>
                 </div>
@@ -332,95 +176,58 @@
         </div>
     </section>
 
-    <!-- Philosophy Section -->
     <section class="py-20 bg-silvati-dark text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80" 
-                 alt="Botanical background" 
-                 class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80" alt="Botanical background" class="w-full h-full object-cover">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4" 
-                    data-en="Our Philosophy" data-fr="Notre Philosophie">Our Philosophy</h2>
+                <h2 class="font-serif text-4xl md:text-5xl mb-4" data-en="Our Philosophy" data-fr="Notre Philosophie">Our Philosophy</h2>
                 <div class="w-24 h-0.5 bg-silvati-gold mx-auto"></div>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 fade-in-up">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-silvati-gold/20 flex items-center justify-center">
                         <i data-lucide="sprout" class="w-8 h-8 text-silvati-gold"></i>
                     </div>
                     <h3 class="font-serif text-2xl mb-4" data-en="100% Natural" data-fr="100% Naturel">100% Natural</h3>
-                    <p class="text-white/70 leading-relaxed" 
-                       data-en="No artificial or synthetic components. Only pure, carefully selected botanical ingredients." 
-                       data-fr="Aucun composant artificiel ou synthétique. Uniquement des ingrédients botaniques purs et soigneusement sélectionnés.">
-                        No artificial or synthetic components. Only pure, carefully selected botanical ingredients.
-                    </p>
+                    <p class="text-white/70 leading-relaxed" data-en="No artificial or synthetic components. Only pure, carefully selected botanical ingredients." data-fr="Aucun composant artificiel ou synthétique.">No artificial or synthetic components. Only pure, carefully selected botanical ingredients.</p>
                 </div>
-                
                 <div class="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 fade-in-up">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-silvati-gold/20 flex items-center justify-center">
                         <i data-lucide="minimize-2" class="w-8 h-8 text-silvati-gold"></i>
                     </div>
                     <h3 class="font-serif text-2xl mb-4" data-en="Minimal Processing" data-fr="Transformation Minimale">Minimal Processing</h3>
-                    <p class="text-white/70 leading-relaxed" 
-                       data-en="We believe in preserving the integrity of our ingredients through the least necessary transformation." 
-                       data-fr="Nous croyons en la préservation de l'intégrité de nos ingrédients grâce à la transformation la moins nécessaire.">
-                        We believe in preserving the integrity of our ingredients through the least necessary transformation.
-                    </p>
+                    <p class="text-white/70 leading-relaxed" data-en="We believe in preserving the integrity of our ingredients through the least necessary transformation." data-fr="Nous croyons en la préservation de l'intégrité de nos ingrédients.">We believe in preserving the integrity of our ingredients through the least necessary transformation.</p>
                 </div>
-                
                 <div class="text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 fade-in-up">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-silvati-gold/20 flex items-center justify-center">
                         <i data-lucide="hand-heart" class="w-8 h-8 text-silvati-gold"></i>
                     </div>
                     <h3 class="font-serif text-2xl mb-4" data-en="Artisan Crafted" data-fr="Artisanal">Artisan Crafted</h3>
-                    <p class="text-white/70 leading-relaxed" 
-                       data-en="Every product is handmade in small batches at our home in Monts Sutton with personal attention to detail." 
-                       data-fr="Chaque produit est fait main en petits lots chez nous à Monts Sutton avec une attention personnelle aux détails.">
-                        Every product is handmade in small batches at our home in Monts Sutton with personal attention to detail.
-                    </p>
+                    <p class="text-white/70 leading-relaxed" data-en="Every product is handmade in small batches at our home in Monts Sutton with personal attention to detail." data-fr="Chaque produit est fait main en petits lots.">Every product is handmade in small batches at our home in Monts Sutton with personal attention to detail.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section id="products" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" 
-                     data-en="OUR COLLECTION" data-fr="NOTRE COLLECTION">OUR COLLECTION</div>
-                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" 
-                    data-en="Featured Products" data-fr="Produits en Vedette">Featured Products</h2>
-                <p class="text-silvati-dark/60 max-w-2xl mx-auto text-lg" 
-                   data-en="Discover our range of natural herbal skincare, crafted with care in the Eastern Townships." 
-                   data-fr="Découvrez notre gamme de soins herbales naturels, fabriqués avec soin dans les Cantons-de-l'Est.">
-                    Discover our range of natural herbal skincare, crafted with care in the Eastern Townships.
-                </p>
+                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" data-en="OUR COLLECTION" data-fr="NOTRE COLLECTION">OUR COLLECTION</div>
+                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" data-en="Featured Products" data-fr="Produits en Vedette">Featured Products</h2>
+                <p class="text-silvati-dark/60 max-w-2xl mx-auto text-lg" data-en="Discover our range of natural herbal skincare, crafted with care in the Eastern Townships." data-fr="Découvrez notre gamme de soins herbales naturels.">Discover our range of natural herbal skincare, crafted with care in the Eastern Townships.</p>
             </div>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
                 <div class="product-card bg-silvati-stone rounded-2xl overflow-hidden fade-in-up group">
                     <div class="aspect-square overflow-hidden bg-gradient-to-br from-silvati-gold/20 to-silvati-pink/30 relative">
-                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80" 
-                             alt="Rosehip & Apricot Facial Care" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 right-4 bg-silvati-gold text-white px-3 py-1 rounded-full text-xs font-semibold">
-                            Bestseller
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80" alt="Rosehip & Apricot Facial Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-silvati-gold text-white px-3 py-1 rounded-full text-xs font-semibold">Bestseller</div>
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-2xl text-silvati-dark mb-2">Rosehip & Apricot</h3>
-                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" 
-                           data-en="Facial Anti-Age Care" data-fr="Soins Visage Anti-Âge">Facial Anti-Age Care</p>
-                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" 
-                           data-en="Luxurious blend of rosehip and apricot kernel oil for mature skin. 30ml." 
-                           data-fr="Mélange luxueux d'églantier et d'huile de noyau d'abricot pour peau mature. 30ml.">
-                            Luxurious blend of rosehip and apricot kernel oil for mature skin. 30ml.
-                        </p>
+                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" data-en="Facial Anti-Age Care" data-fr="Soins Visage Anti-Âge">Facial Anti-Age Care</p>
+                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" data-en="Luxurious blend of rosehip and apricot kernel oil for mature skin. 30ml." data-fr="Mélange luxueux d'églantier et d'huile de noyau d'abricot.">Luxurious blend of rosehip and apricot kernel oil for mature skin. 30ml.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Prunus armeniaca</span>
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Cera alba</span>
@@ -432,23 +239,14 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- Product 2 -->
                 <div class="product-card bg-silvati-stone rounded-2xl overflow-hidden fade-in-up group">
                     <div class="aspect-square overflow-hidden bg-gradient-to-br from-silvati-green/20 to-silvati-gold/10 relative">
-                        <img src="https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=600&q=80" 
-                             alt="Herbal Eye Care" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=600&q=80" alt="Herbal Eye Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-2xl text-silvati-dark mb-2">Botanical Eye</h3>
-                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" 
-                           data-en="Around-Eye Treatment" data-fr="Traitement Contour des Yeux">Around-Eye Treatment</p>
-                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" 
-                           data-en="Gentle herbal formula to nourish the delicate eye area. Reduces appearance of fine lines." 
-                           data-fr="Formule herbales douce pour nourrir la zone délicate des yeux. Réduit l'apparence des ridules.">
-                            Gentle herbal formula to nourish the delicate eye area. Reduces appearance of fine lines.
-                        </p>
+                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" data-en="Around-Eye Treatment" data-fr="Traitement Contour des Yeux">Around-Eye Treatment</p>
+                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" data-en="Gentle herbal formula to nourish the delicate eye area." data-fr="Formule herbales douce pour nourrir la zone délicate des yeux.">Gentle herbal formula to nourish the delicate eye area. Reduces appearance of fine lines.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Chamomile</span>
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Green Tea</span>
@@ -459,23 +257,14 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- Product 3 -->
                 <div class="product-card bg-silvati-stone rounded-2xl overflow-hidden fade-in-up group">
                     <div class="aspect-square overflow-hidden bg-gradient-to-br from-silvati-purple/20 to-silvati-pink/30 relative">
-                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" 
-                             alt="Herbal Body Care" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="Herbal Body Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="font-serif text-2xl text-silvati-dark mb-2">Lavender & Shea</h3>
-                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" 
-                           data-en="Body Nourishment" data-fr="Nourrissant Corporel">Body Nourishment</p>
-                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" 
-                           data-en="Rich body cream with butyrospermum parkii and lavender essential oil for silky skin." 
-                           data-fr="Crème corporelle riche avec du butyrospermum parkii et huile essentielle de lavande pour une peau soyeuse.">
-                            Rich body cream with butyrospermum parkii and lavender essential oil for silky skin.
-                        </p>
+                        <p class="text-silvati-gold text-sm font-semibold mb-3 uppercase tracking-wide" data-en="Body Nourishment" data-fr="Nourrissant Corporel">Body Nourishment</p>
+                        <p class="text-silvati-dark/60 text-sm mb-4 line-clamp-2" data-en="Rich body cream with shea butter and lavender essential oil." data-fr="Crème corporelle riche avec du beurre de karité et huile de lavande.">Rich body cream with butyrospermum parkii and lavender essential oil for silky skin.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Shea Butter</span>
                             <span class="ingredient-tag px-3 py-1 bg-white rounded-full text-xs text-silvati-dark/70 border border-silvati-gold/20 cursor-default">Lavender</span>
@@ -487,22 +276,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="mt-12 text-center fade-in-up">
-                <p class="text-silvati-dark/60 mb-4" 
-                   data-en="Can't find what you're looking for? We create custom formulations." 
-                   data-fr="Vous ne trouvez pas ce que vous cherchez? Nous créons des formulations sur mesure.">
-                    Can't find what you're looking for? We create custom formulations.
-                </p>
-                <a href="#contact" class="inline-flex items-center text-silvati-gold font-semibold hover:underline">
-                    <span data-en="Contact us for custom orders" data-fr="Contactez-nous pour commandes personnalisées">Contact us for custom orders</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Ingredients Section -->
     <section id="ingredients" class="py-20 md:py-32 bg-silvati-stone botanical-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -526,22 +302,11 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="order-1 md:order-2 fade-in-up">
-                    <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" 
-                         data-en="OUR INGREDIENTS" data-fr="NOS INGRÉDIENTS">OUR INGREDIENTS</div>
-                    <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-6 leading-tight" 
-                        data-en="Nature's Finest, Selected with Care" 
-                        data-fr="Le Meilleur de la Nature, Sélectionné avec Soin">
-                        Nature's Finest, Selected with Care
-                    </h2>
+                    <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" data-en="OUR INGREDIENTS" data-fr="NOS INGRÉDIENTS">OUR INGREDIENTS</div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-6 leading-tight" data-en="Nature's Finest, Selected with Care" data-fr="Le Meilleur de la Nature, Sélectionné avec Soin">Nature's Finest, Selected with Care</h2>
                     <div class="w-16 h-1 bg-silvati-gold mb-6"></div>
-                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" 
-                       data-en="Every ingredient in our products is carefully chosen for its beneficial properties. We maintain strict standards for quality, sustainability, and efficacy." 
-                       data-fr="Chaque ingrédient dans nos produits est soigneusement choisi pour ses propriétés bénéfiques. Nous maintenons des standards stricts de qualité, durabilité et efficacité.">
-                        Every ingredient in our products is carefully chosen for its beneficial properties. We maintain strict standards for quality, sustainability, and efficacy.
-                    </p>
-                    
+                    <p class="text-silvati-dark/70 text-lg leading-relaxed mb-6" data-en="Every ingredient in our products is carefully chosen for its beneficial properties." data-fr="Chaque ingrédient dans nos produits est soigneusement choisi.">Every ingredient in our products is carefully chosen for its beneficial properties. We maintain strict standards for quality, sustainability, and efficacy.</p>
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div class="w-12 h-12 rounded-full bg-silvati-gold/10 flex items-center justify-center flex-shrink-0">
@@ -549,27 +314,25 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-silvati-dark mb-1" data-en="Botanical Oils" data-fr="Huiles Botaniques">Botanical Oils</h4>
-                                <p class="text-sm text-silvati-dark/60" data-en="Cold-pressed rosehip, apricot kernel, and lavender oils rich in vitamins and antioxidants." data-fr="Huiles d'églantier, de noyau d'abricot et de lavande pressées à froid, riches en vitamines et antioxydants.">Cold-pressed rosehip, apricot kernel, and lavender oils rich in vitamins and antioxidants.</p>
+                                <p class="text-sm text-silvati-dark/60" data-en="Cold-pressed rosehip, apricot kernel, and lavender oils rich in vitamins and antioxidants." data-fr="Huiles pressées à froid, riches en vitamines.">Cold-pressed rosehip, apricot kernel, and lavender oils rich in vitamins and antioxidants.</p>
                             </div>
                         </div>
-                        
                         <div class="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div class="w-12 h-12 rounded-full bg-silvati-gold/10 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="check-circle" class="w-6 h-6 text-silvati-gold"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-silvati-dark mb-1" data-en="Natural Waxes" data-fr="Cires Naturelles">Natural Waxes</h4>
-                                <p class="text-sm text-silvati-dark/60" data-en="Pure cera alba (beeswax) and plant-based alternatives for texture and protection." data-fr="Cera alba pure (cire d'abeille) et alternatives végétales pour la texture et la protection.">Pure cera alba (beeswax) and plant-based alternatives for texture and protection.</p>
+                                <p class="text-sm text-silvati-dark/60" data-en="Pure cera alba (beeswax) and plant-based alternatives for texture and protection." data-fr="Cera alba pure et alternatives végétales.">Pure cera alba (beeswax) and plant-based alternatives for texture and protection.</p>
                             </div>
                         </div>
-                        
                         <div class="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                             <div class="w-12 h-12 rounded-full bg-silvati-gold/10 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="check-circle" class="w-6 h-6 text-silvati-gold"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-silvati-dark mb-1" data-en="Butters & Extracts" data-fr="Beurres & Extraits">Butters & Extracts</h4>
-                                <p class="text-sm text-silvati-dark/60" data-en="Nutrient-rich butyrospermum parkii (shea butter) and concentrated herbal extracts." data-fr="Butyrospermum parkii riche en nutriments (beurre de karité) et extraits herbales concentrés.">Nutrient-rich butyrospermum parkii (shea butter) and concentrated herbal extracts.</p>
+                                <p class="text-sm text-silvati-dark/60" data-en="Nutrient-rich shea butter and concentrated herbal extracts." data-fr="Beurre de karité riche en nutriments et extraits.">Nutrient-rich butyrospermum parkii (shea butter) and concentrated herbal extracts.</p>
                             </div>
                         </div>
                     </div>
@@ -578,33 +341,22 @@
         </div>
     </section>
 
-    <!-- Market Section -->
     <section id="market" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" 
-                     data-en="FIND US" data-fr="NOUS TROUVER">FIND US</div>
-                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" 
-                    data-en="Experience Silvati in Person" 
-                    data-fr="Découvrez Silvati en Personne">Experience Silvati in Person</h2>
+                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" data-en="FIND US" data-fr="NOUS TROUVER">FIND US</div>
+                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" data-en="Experience Silvati in Person" data-fr="Découvrez Silvati en Personne">Experience Silvati in Person</h2>
             </div>
-
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Saturday Market -->
                 <div class="bg-silvati-stone rounded-2xl p-8 fade-in-up relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-silvati-gold/10 rounded-full -mr-16 -mt-16"></div>
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-silvati-gold rounded-2xl flex items-center justify-center mb-6">
                             <i data-lucide="store" class="w-8 h-8 text-white"></i>
                         </div>
-                        <h3 class="font-serif text-2xl text-silvati-dark mb-2" 
-                            data-en="Sutton Saturday Market" data-fr="Marché du Samedi de Sutton">Sutton Saturday Market</h3>
+                        <h3 class="font-serif text-2xl text-silvati-dark mb-2" data-en="Sutton Saturday Market" data-fr="Marché du Samedi de Sutton">Sutton Saturday Market</h3>
                         <p class="text-silvati-gold font-semibold mb-4" data-en="Summer Season" data-fr="Saison Estivale">Summer Season</p>
-                        <p class="text-silvati-dark/70 mb-6" 
-                           data-en="Join us every Saturday during summer months at the Sutton Saturday Market. Meet the Lichtenauer family, sample our products, and experience the vibrant local community." 
-                           data-fr="Rejoignez-nous chaque samedi pendant les mois d'été au Marché du Samedi de Sutton. Rencontrez la famille Lichtenauer, dégustez nos produits et découvrez la communauté locale dynamique.">
-                            Join us every Saturday during summer months at the Sutton Saturday Market. Meet the Lichtenauer family, sample our products, and experience the vibrant local community.
-                        </p>
+                        <p class="text-silvati-dark/70 mb-6" data-en="Join us every Saturday during summer months at the Sutton Saturday Market." data-fr="Rejoignez-nous chaque samedi pendant les mois d'été.">Join us every Saturday during summer months at the Sutton Saturday Market. Meet the Lichtenauer family, sample our products, and experience the vibrant local community.</p>
                         <div class="space-y-2 text-sm">
                             <div class="flex items-center text-silvati-dark/70">
                                 <i data-lucide="calendar" class="w-4 h-4 mr-2 text-silvati-gold"></i>
@@ -617,8 +369,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Online Shop -->
                 <div class="bg-silvati-dark rounded-2xl p-8 text-white fade-in-up relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-silvati-gold/20 rounded-full -mr-16 -mt-16"></div>
                     <div class="relative z-10">
@@ -627,11 +377,7 @@
                         </div>
                         <h3 class="font-serif text-2xl mb-2" data-en="Online Shop" data-fr="Boutique en Ligne">Online Shop</h3>
                         <p class="text-silvati-gold font-semibold mb-4" data-en="Available Year-Round" data-fr="Disponible Toute l'Année">Available Year-Round</p>
-                        <p class="text-white/70 mb-6" 
-                           data-en="Browse our complete collection online through our Square store. Secure payment and shipping across Canada." 
-                           data-fr="Parcourez notre collection complète en ligne via notre boutique Square. Paiement sécurisé et livraison partout au Canada.">
-                            Browse our complete collection online through our Square store. Secure payment and shipping across Canada.
-                        </p>
+                        <p class="text-white/70 mb-6" data-en="Browse our complete collection online through our Square store." data-fr="Parcourez notre collection complète en ligne.">Browse our complete collection online through our Square store. Secure payment and shipping across Canada.</p>
                         <a href="https://silvati.square.site" target="_blank" class="inline-flex items-center px-6 py-3 bg-silvati-gold text-white rounded-lg font-semibold hover:bg-silvati-gold/90 transition-all duration-300">
                             <span data-en="Visit Online Store" data-fr="Visiter la Boutique">Visit Online Store</span>
                             <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
@@ -639,12 +385,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Location Map Visualization -->
             <div class="mt-12 rounded-2xl overflow-hidden shadow-xl h-64 md:h-96 relative fade-in-up">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" 
-                     alt="Monts Sutton Landscape" 
-                     class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Monts Sutton Landscape" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-silvati-dark/40 flex items-center justify-center">
                     <div class="text-center text-white p-6 bg-silvati-dark/60 backdrop-blur-sm rounded-xl">
                         <i data-lucide="map-pin" class="w-8 h-8 mx-auto mb-2 text-silvati-gold"></i>
@@ -657,21 +399,13 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 md:py-32 bg-silvati-stone">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 fade-in-up">
-                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" 
-                     data-en="CONTACT" data-fr="CONTACT">CONTACT</div>
-                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" 
-                    data-en="Get in Touch" data-fr="Contactez-Nous">Get in Touch</h2>
-                <p class="text-silvati-dark/60" 
-                   data-en="Questions about our products? Looking for a custom formulation? We'd love to hear from you." 
-                   data-fr="Des questions sur nos produits? Vous cherchez une formulation personnalisée? Nous serions ravis de vous entendre.">
-                    Questions about our products? Looking for a custom formulation? We'd love to hear from you.
-                </p>
+                <div class="inline-block px-4 py-2 bg-silvati-gold/10 rounded-full text-silvati-gold text-sm font-semibold tracking-wider mb-4" data-en="CONTACT" data-fr="CONTACT">CONTACT</div>
+                <h2 class="font-serif text-4xl md:text-5xl text-silvati-dark mb-4" data-en="Get in Touch" data-fr="Contactez-Nous">Get in Touch</h2>
+                <p class="text-silvati-dark/60" data-en="Questions about our products? Looking for a custom formulation?" data-fr="Des questions sur nos produits?">Questions about our products? Looking for a custom formulation? We'd love to hear from you.</p>
             </div>
-
             <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 fade-in-up">
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
                     <div class="flex items-start space-x-4">
@@ -685,7 +419,6 @@
                             <a href="mailto:clients@silvati.ca" class="text-silvati-dark/70 hover:text-silvati-gold transition-colors">clients@silvati.ca</a>
                         </div>
                     </div>
-                    
                     <div class="flex items-start space-x-4">
                         <div class="w-12 h-12 rounded-full bg-silvati-gold/10 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="phone" class="w-5 h-5 text-silvati-gold"></i>
@@ -696,21 +429,17 @@
                         </div>
                     </div>
                 </div>
-
                 <form class="space-y-6" onsubmit="handleSubmit(event)">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-silvati-dark mb-2" data-en="Name" data-fr="Nom">Name</label>
-                            <input type="text" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all" 
-                                   placeholder="Your name">
+                            <input type="text" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all" placeholder="Your name">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-silvati-dark mb-2" data-en="Email" data-fr="Courriel">Email</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all" 
-                                   placeholder="your@email.com">
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all" placeholder="your@email.com">
                         </div>
                     </div>
-                    
                     <div>
                         <label class="block text-sm font-medium text-silvati-dark mb-2" data-en="Subject" data-fr="Sujet">Subject</label>
                         <select class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all bg-white">
@@ -720,13 +449,10 @@
                             <option value="other" data-en="Other" data-fr="Autre">Other</option>
                         </select>
                     </div>
-                    
                     <div>
                         <label class="block text-sm font-medium text-silvati-dark mb-2" data-en="Message" data-fr="Message">Message</label>
-                        <textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all resize-none" 
-                                  placeholder="How can we help you?"></textarea>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-silvati-gold/20 focus:border-silvati-gold focus:ring-2 focus:ring-silvati-gold/20 outline-none transition-all resize-none" placeholder="How can we help you?"></textarea>
                     </div>
-                    
                     <button type="submit" class="w-full py-4 bg-silvati-gold text-white rounded-lg font-semibold hover:bg-silvati-gold/90 transition-all duration-300 flex items-center justify-center space-x-2">
                         <span data-en="Send Message" data-fr="Envoyer le Message">Send Message</span>
                         <i data-lucide="send" class="w-4 h-4"></i>
@@ -736,7 +462,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-silvati-dark text-white py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -751,13 +476,8 @@
                             <p class="text-xs text-white/60 tracking-widest">INCORPORATED</p>
                         </div>
                     </div>
-                    <p class="text-white/60 text-sm leading-relaxed max-w-md" 
-                       data-en="Artisan herbal skincare from Monts Sutton, Quebec. Family-owned, naturally crafted, minimal ingredients." 
-                       data-fr="Soins herbales artisans des Monts Sutton, Québec. Familiale, naturellement fabriqué, ingrédients minimaux.">
-                        Artisan herbal skincare from Monts Sutton, Quebec. Family-owned, naturally crafted, minimal ingredients.
-                    </p>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-md" data-en="Artisan herbal skincare from Monts Sutton, Quebec." data-fr="Soins herbales artisans des Monts Sutton, Québec.">Artisan herbal skincare from Monts Sutton, Quebec. Family-owned, naturally crafted, minimal ingredients.</p>
                 </div>
-                
                 <div>
                     <h4 class="font-semibold mb-4 text-silvati-gold" data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-white/60">
@@ -767,7 +487,6 @@
                         <li><a href="https://silvati.square.site" target="_blank" class="hover:text-silvati-gold transition-colors" data-en="Online Shop" data-fr="Boutique en Ligne">Online Shop</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="font-semibold mb-4 text-silvati-gold" data-en="Legal" data-fr="Légal">Legal</h4>
                     <ul class="space-y-2 text-sm text-white/60">
@@ -778,11 +497,8 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-white/40 text-sm mb-4 md:mb-0">
-                    &copy; 2024 Herboristerie Silvati Incorporated. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span>
-                </p>
+                <p class="text-white/40 text-sm mb-4 md:mb-0">&copy; 2024 Herboristerie Silvati Incorporated. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
                 <div class="flex items-center space-x-4">
                     <span class="text-white/40 text-xs">346 Priest Road, Sutton QC</span>
                 </div>
@@ -790,14 +506,12 @@
         </div>
     </footer>
 
-    <!-- Order Modal -->
     <div id="orderModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeOrderModal()"></div>
         <div class="bg-white rounded-2xl max-w-md w-full relative z-10 p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
             <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-silvati-dark/60 hover:text-silvati-dark">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
-            
             <div class="text-center mb-6">
                 <div class="w-16 h-16 bg-silvati-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i data-lucide="shopping-bag" class="w-8 h-8 text-silvati-gold"></i>
@@ -805,204 +519,21 @@
                 <h3 class="font-serif text-2xl text-silvati-dark mb-2" data-en="Order Product" data-fr="Commander le Produit">Order Product</h3>
                 <p class="text-silvati-dark/60 text-sm" id="modalProductName"></p>
             </div>
-            
             <div class="space-y-4">
-                <p class="text-silvati-dark/70 text-sm text-center" 
-                   data-en="You will be redirected to our secure Square store to complete your purchase." 
-                   data-fr="Vous serez redirigé vers notre boutique Square sécurisée pour finaliser votre achat.">
-                    You will be redirected to our secure Square store to complete your purchase.
-                </p>
-                
+                <p class="text-silvati-dark/70 text-sm text-center" data-en="You will be redirected to our secure Square store." data-fr="Vous serez redirigé vers notre boutique Square.">You will be redirected to our secure Square store to complete your purchase.</p>
                 <a href="https://silvati.square.site" target="_blank" class="block w-full py-3 bg-silvati-gold text-white rounded-lg font-semibold text-center hover:bg-silvati-gold/90 transition-colors">
                     <span data-en="Continue to Shop" data-fr="Continuer vers la Boutique">Continue to Shop</span>
                 </a>
-                
-                <button onclick="closeOrderModal()" class="block w-full py-3 border border-silvati-gold/30 text-silvati-dark rounded-lg font-semibold hover:bg-silvati-gold/5 transition-colors" 
-                        data-en="Cancel" data-fr="Annuler">Cancel</button>
-            </div>
-            
-            <div class="mt-6 pt-6 border-t border-silvati-gold/10">
-                <p class="text-xs text-silvati-dark/50 text-center" 
-                   data-en="Prefer to order by email? Write us at market@silvati.ca" 
-                   data-fr="Vous préférez commander par courriel? Écrivez-nous à market@silvati.ca">
-                    Prefer to order by email? Write us at market@silvati.ca
-                </p>
+                <button onclick="closeOrderModal()" class="block w-full py-3 border border-silvati-gold/30 text-silvati-dark rounded-lg font-semibold hover:bg-silvati-gold/5 transition-colors" data-en="Cancel" data-fr="Annuler">Cancel</button>
             </div>
         </div>
     </div>
 
-    <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-4 right-4 bg-silvati-dark text-white px-6 py-4 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center space-x-3">
         <i data-lucide="check-circle" class="w-5 h-5 text-silvati-gold"></i>
         <span id="toastMessage">Message sent successfully!</span>
     </div>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Language Management
-        let currentLang = 'en';
-        
-        function setLanguage(lang) {
-            currentLang = lang;
-            
-            // Update buttons
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-            
-            // Update all elements with data-en and data-fr
-            document.querySelectorAll('[data-en]').forEach(el => {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.placeholder = el.getAttribute(`data-${lang}`);
-                } else {
-                    el.textContent = el.getAttribute(`data-${lang}`);
-                }
-            });
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-        }
-
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('open');
-        }
-
-        // Order Modal
-        function openOrderModal(productName) {
-            const modal = document.getElementById('orderModal');
-            const content = document.getElementById('modalContent');
-            document.getElementById('modalProductName').textContent = productName;
-            
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            setTimeout(() => {
-                content.classList.remove('scale-95', 'opacity-0');
-                content.classList.add('scale-100', 'opacity-100');
-            }, 10);
-        }
-
-        function closeOrderModal() {
-            const modal = document.getElementById('orderModal');
-            const content = document.getElementById('modalContent');
-            
-            content.classList.remove('scale-100', 'opacity-100');
-            content.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 300);
-        }
-
-        // Form Handling
-        function handleSubmit(e) {
-            e.preventDefault();
-            showToast(currentLang === 'en' ? 'Message sent successfully! We will respond within 24 hours.' : 'Message envoyé avec succès! Nous répondrons dans les 24 heures.');
-            e.target.reset();
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastMessage').textContent = message;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 4000);
-        }
-
-        // Navigation Scroll Effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const navTexts = document.querySelectorAll('.nav-text');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const logoText = document.querySelector('.nav-text');
-            const logoSub = document.querySelector('.nav-text-sub');
-            
-            if (window.scrollY > 50) {
-                navbar.classList.add('nav-blur', 'shadow-md');
-                navbar.classList.remove('bg-transparent', 'py-4');
-                navbar.classList.add('py-2');
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white');
-                    link.classList.add('text-silvati-dark');
-                });
-                
-                if (logoText) {
-                    logoText.classList.remove('text-white');
-                    logoText.classList.add('text-silvati-dark');
-                }
-                if (logoSub) {
-                    logoSub.classList.remove('text-white/80');
-                    logoSub.classList.add('text-silvati-dark/60');
-                }
-            } else {
-                navbar.classList.remove('nav-blur', 'shadow-md', 'py-2');
-                navbar.classList.add('bg-transparent', 'py-4');
-                
-                navLinks.forEach(link => {
-                    link.classList.add('text-white');
-                    link.classList.remove('text-silvati-dark');
-                });
-                
-                if (logoText) {
-                    logoText.classList.add('text-white');
-                    logoText.classList.remove('text-silvati-dark');
-                }
-                if (logoSub) {
-                    logoSub.classList.add('text-white/80');
-                    logoSub.classList.remove('text-silvati-dark/60');
-                }
-            }
-        });
-
-        // GSAP Animations
-        if (typeof gsap !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Hero Animations
-            const heroTl = gsap.timeline();
-            heroTl.to('.hero-logo', { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' })
-                  .to('.hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, '-=0.5')
-                  .to('.hero-subtitle', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-                  .to('.hero-line', { opacity: 1, width: '6rem', duration: 0.8, ease: 'power3.out' }, '-=0.4')
-                  .to('.hero-desc', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
-                  .to('.hero-cta', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4');
-
-            // Scroll Animations
-            gsap.utils.toArray('.fade-in-up').forEach(element => {
-                gsap.fromTo(element, 
-                    { opacity: 0, y: 30 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.8,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: element,
-                            start: 'top 85%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }
-                );
-            });
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
