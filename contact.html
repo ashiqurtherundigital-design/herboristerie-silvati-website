@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - Herboristerie Silvati</title>
+    <meta name="description" content="Contactez Herboristerie Silvati, votre herboriste a Sutton, Quebec. Questions sur les plantes medicinales, commandes ou conseil.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Herboristerie Silvati</span>
+                <span class="logo-subtitle">Plantes medicinales</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="products.html" class="nav-link">Produits</a></li>
+                    <li><a href="about.html" class="nav-link">A propos</a></li>
+                    <li><a href="contact.html" class="nav-link nav-link--active">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section--sm" style="background-color: var(--color-bg-secondary); border-bottom: 1px solid var(--color-border-light);">
+            <div class="container container--narrow">
+                <h1 class="text-center" style="color: var(--color-forest); margin-bottom: var(--space-4);">Nous Contacter</h1>
+                <p class="text-center text-muted" style="font-size: var(--text-lg);">Nous sommes la pour repondre a vos questions</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-16);">
+                    
+                    <div>
+                        <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-6); color: var(--color-forest);">Envoyez-nous un message</h2>
+                        <form class="contact-form" action="#" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nom complet *</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Sujet *</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="" selected disabled>Choisir un sujet</option>
+                                    <option value="question">Question sur les plantes</option>
+                                    <option value="commande">Commande</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Decrivez votre demande en quelques mots..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-6); color: var(--color-forest);">Informations</h2>
+                        
+                        <div class="card card--bordered" style="margin-bottom: var(--space-6);">
+                            <div class="card__header">
+                                <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Adresse</h3>
+                            </div>
+                            <div class="card__body">
+                                <p style="margin-bottom: var(--space-2);">
+                                    <strong>Herboristerie Silvati</strong><br>
+                                    346 Priest Road<br>
+                                    Sutton, QC J0E 2K0<br>
+                                    Quebec, Canada
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card card--bordered" style="margin-bottom: var(--space-6);">
+                            <div class="card__header">
+                                <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Coordonnees</h3>
+                            </div>
+                            <div class="card__body">
+                                <p style="margin-bottom: var(--space-3);">
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:silvati@email.com" style="color: var(--color-terracotta);">silvati@email.com</a>
+                                </p>
+                                <p>
+                                    <strong>Telephone:</strong><br>
+                                    <a href="tel:+15551234567" style="color: var(--color-terracotta);">(555) 123-4567</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card card--bordered">
+                            <div class="card__header">
+                                <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Horaire</h3>
+                            </div>
+                            <div class="card__body">
+                                <p style="margin-bottom: var(--space-3);">
+                                    <strong>Samedi</strong><br>
+                                    9h00 - 17h00<br>
+                                    <span style="color: var(--color-terracotta); font-size: var(--text-sm);">Marche paysan de Sutton</span>
+                                </p>
+                                <p style="font-size: var(--text-sm); color: var(--color-text-light); margin: 0;">
+                                    Autres horaires sur rendez-vous. N'hesitez pas a nous contacter pour planifier votre visite.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: var(--space-16);">
+                    <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-6); color: var(--color-forest); text-align: center;">Nous trouver</h2>
+                    
+                    <div style="background-color: var(--color-bg-accent); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-16); text-align: center; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05; background-image: radial-gradient(circle at 20% 50%, var(--color-forest) 1px, transparent 1px), radial-gradient(circle at 80% 80%, var(--color-terracotta) 1px, transparent 1px); background-size: 30px 30px, 40px 40px;"></div>
+                        
+                        <div style="position: relative; z-index: 1;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="var(--color-sage)" viewBox="0 0 24 24" style="margin-bottom: var(--space-4);">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-bottom: var(--space-2);">
+                                <strong>Carte a venir</strong>
+                            </p>
+                            <p style="color: var(--color-text-light); margin: 0;">
+                                346 Priest Road, Sutton, QC J0E 2K0
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: var(--space-12); padding: var(--space-8); background-color: var(--color-bg-secondary); border-radius: var(--radius-md); text-align: center;">
+                    <h3 style="font-size: var(--text-xl); color: var(--color-forest); margin-bottom: var(--space-4);">Vous avez une question frequente?</h3>
+                    <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6); max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Consultez notre section Questions frequemment posees pour trouver des reponses rapides sur les plantes medicinales, les preparations et les commandes.
+                    </p>
+                    <a href="#" class="btn btn--secondary">Voir les questions frequentes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">Herboristerie Silvati</span>
+                        <span class="logo-subtitle" style="color: var(--color-sage);">Plantes medicinales</span>
+                    </a>
+                    <p class="footer-tagline">Votre herboriste de confiance a Sutton, Quebec</p>
+                </div>
+                <div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <p>346 Priest Road</p>
+                    <p>Sutton, QC J0E 2K0</p>
+                    <p>silvati@email.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Herboristerie Silvati. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
+                navToggle.addEventListener('click', function() {
+                    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isOpen);
+                    navList.classList.toggle('nav-list--open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
